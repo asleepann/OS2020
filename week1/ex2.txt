@@ -1,0 +1,34 @@
+    1  whoami
+    2  hastname
+    3  hostname
+    4  man whoami
+    5  man man
+    6  man -h
+    7  touch <filename>
+    8  less
+    9  less -h
+   10  less--help
+   11  less --help
+   12  /home
+   13  pwd
+   14  mkdir <lab1>
+   15  cd Desktop
+   16  gcc
+   17  sudo apt install gcc
+   18  mkdir
+   19  $mkdir
+   20  $mkdir<lab1>
+   21  $mkdir <week1>
+   22  $mkdir week1
+   23  mkdir week1
+   24  pwd
+   25  mkdir ~/week1
+   26  cd ~/week1
+   27  ls -l
+   28  ls /usr/bin
+   29  touch ex1.txt
+   30  ls /usr/bin | grep gcc | sort -r > ~/week1/ex1.txt
+   31  touch ex2.txt
+   32  touch ex3.txt
+   33  touch ex4.txt
+   34  history > ~/week1/ex2.txt

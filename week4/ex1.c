@@ -14,6 +14,8 @@ int main () {
 }
 
 /**
+fork() uses pseudo-parallelizm, and sometimes commands shaffle.
+Example of shaffeled commands (line 33-36):
 Hello from parent[8984 - 8985]
 Hello from child[8985 - 0]
 Hello from parent[8986 - 8987]

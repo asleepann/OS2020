@@ -78,6 +78,8 @@ int main() {
     for (int i = 1; i < n; i++) {
         int minBT = 1000000;
         int current = 0;
+
+        // search for task from waiting list with min burst time
         for (int j = 1; j < n; j++) {
             if (at[j] <= ct[previous] && ended[j] == 0 && bt[j] < minBT) {
                 minBT = bt[j];
@@ -85,6 +87,7 @@ int main() {
             }
         }
 
+        // if there are no pending tasks, search for the earliest non-completed
         if (current == 0) {
             for (int j = 1; j < n; j++) {
                 if (ended[j] == 0) {
@@ -97,6 +100,7 @@ int main() {
             wt[current] = ct[previous] - at[current];
         }
 
+        // update metrics
         ct[current] = at[current] + wt[current] + bt[current];
         tat[current] = ct[current] - at[current];
         avtat += tat[current];

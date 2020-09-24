@@ -135,3 +135,74 @@ int main() {
 
     return 0;
 }
+
+/**
+ * Input example:
+ * 6
+ * 
+ * 0
+ * 0
+ * 1
+ * 1
+ * 10
+ * 5
+ * 
+ * 3
+ * 2
+ * 4
+ * 8
+ * 1
+ * 10
+ * 
+ * 
+ * First come, first served output:
+Process AT      BT      CT      TAT     WT
+P[0]    0       3       3       3       0
+P[1]    0       2       5       5       3
+P[2]    1       4       9       8       4
+P[3]    1       8       17      16      8
+P[4]    5       10      27      22      12
+P[5]    10      1       28      18      17
+Average Turnaround Time: 12.00
+Average Waiting Time: 7.33
+ * 
+ * 
+ * Shortest job next output:
+Process AT      BT      CT      TAT     WT
+P[0]    0       2       2       2       0
+P[1]    0       3       5       5       2
+P[2]    1       4       9       8       4
+P[3]    1       8       17      16      8
+P[4]    5       10      28      23      13
+P[5]    10      1       18      8       7
+Average Turnaround Time: 10.33
+Average Waiting Time: 5.67
+ * 
+ * 
+ * Round robin output with quantum = 4:
+Process AT      BT      CT      TAT     WT
+P[0]    0       2       2       2       0
+P[1]    0       3       5       5       2
+P[2]    1       4       9       8       4
+P[3]    1       8       17      16      8
+P[4]    5       10      28      23      13
+P[5]    10      1       18      8       7
+Average Turnaround Time: 10.33
+Average Waiting Time: 5.67
+ *  
+ * 
+ * Round robin output with quantum = 2:
+Process AT      BT      CT      TAT     WT
+P[0]    0       3       12      12      9
+P[1]    0       2       4       4       2
+P[2]    1       4       14      13      9
+P[3]    1       8       24      23      15
+P[4]    5       10      28      23      13
+P[5]    10      1       11      1       0
+Average Turnaround Time: 12.67
+Average Waiting Time: 8.00
+ * 
+ * 
+ * In this particular case, SJN and RR (with quantum = 4) schedule algorithms are better than FCFS algorithm.
+ * Seems like, it is better to choose such quantum which is close to average of burst time of all progams.
+ **/

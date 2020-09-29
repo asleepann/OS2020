@@ -1,22 +1,22 @@
 #include <stdio.h>
 
 void *myRealloc(void *ptr, size_t size) {
-    if (ptr == NULL) {
-        return malloc(size);
-    } else if (size == 0) {
-        free(ptr);
-        return NULL;
-    } else {
-        void *a = malloc(size);
-        a = memcpy(a, ptr, size); // copy elements to the new memory fields
-        free(ptr); // free originally allocated memory
-        return a;
-    }
+	if (ptr == NULL) {
+		return malloc(size);
+	} else if (size == 0) {
+		free(ptr);
+		return NULL;
+	} else {
+		void *a = malloc(size);
+		a = memcpy(a, ptr, size); // copy elements to the new memory fields
+		free(ptr); // free originally allocated memory
+		return a;
+	}
 }
 
 int main() {
-    // test meRealloc() by using ex3
-    printf("Enter original array size: ");
+	// test meRealloc() by using ex3
+	printf("Enter original array size: ");
 	int n1;
 	scanf("%d", &n1);
 
@@ -33,11 +33,11 @@ int main() {
 
 	a1 = myRealloc(a1, n2 * sizeof(int)); // use my own realloc
 
-    printf("Array with new size:\n");
+    	printf("Array with new size:\n");
 	for (int i = 0; i < n2; i++) {
 		printf("%d ", a1[i]);
 	}
 	printf("\n");
 
-    return 0;
+	return 0;
 }

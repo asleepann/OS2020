@@ -33,12 +33,6 @@ int main() {
 
 	a1 = myRealloc(a1, n2 * sizeof(int));
 
-    if (n2 > n1) {
-        for (int i = n1; i < n2; i++) {
-            a1[i] = 0;
-        }
-    }
-
     printf("Array with new size:\n");
 	for (int i = 0; i < n2; i++) {
 		printf("%d ", a1[i]);

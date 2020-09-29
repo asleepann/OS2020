@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+   4098	    624	      8	   4730	   127a	ex3_from_week_6

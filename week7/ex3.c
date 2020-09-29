@@ -31,11 +31,11 @@ int main(){
 	a1 = realloc(a1, n2);
 
 	// If the new array is a larger size, set all new members to 0. Reason: don't want to use uninitialized variables.
-    if (n2 > n1) {
-        for (i = n1; i < n2; i++) {
-            a1[i] = 0;
-        }
-    }
+    	if (n2 > n1) {
+        	for (i = n1; i < n2; i++) {
+            		a1[i] = 0;
+        	}
+    	}
 
 	for (i = 0; i < n2; i++) {
 		// Print each element out (to make sure things look right)

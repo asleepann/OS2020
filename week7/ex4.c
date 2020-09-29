@@ -31,7 +31,7 @@ int main() {
 	int n2;
 	scanf("%d", &n2);
 
-	a1 = myRealloc(a1, n2 * sizeof(int));
+	a1 = myRealloc(a1, n2 * sizeof(int)); // use my own realloc
 
     printf("Array with new size:\n");
 	for (int i = 0; i < n2; i++) {

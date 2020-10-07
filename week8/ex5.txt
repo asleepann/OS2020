@@ -1,1 +1,4 @@
-The physical address indicates a real place in a memory where data is stored (chips of RAM, for example). The virtual address indicates the region of virtual memory which is created by the operating system, for example, in case if there is not enough allocated physical memory for the program execution. That is the difference between physical and virtual addresses.
+The physical address indicates a real place in a memory where data is stored (chips of RAM, for example).
+The virtual address indicates the region of virtual memory which is created by the operating system, 
+for example, in case if there is not enough allocated physical memory for the program execution. 
+That is the difference between physical and virtual addresses.

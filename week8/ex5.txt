@@ -1,0 +1,1 @@
+Physical address indicates a real place in a memory whereas virtual address

@@ -1,52 +1,68 @@
+Results from ex1:
+n = 10
+Output:
+Hit / Miss = 10 / 990 = 0.010101
+
+n = 50
+Output:
+Hit / Miss = 52 / 948 = 0.054852
+
+n = 100
+Output:
+Hit / Miss = 98 / 902 = 0.108647
+
+
 I constructed sequence of references that will result in increased Hit/Miss ratio by:
-- increasing the quantity of consequetive references to the same page:
+- increasing the quantity of consequetive references to the same page (300 references to 1 and 700 randomly generated numbers from 1 to 1000 - ex2_input_1_1.txt):
 n = 10
 Output:
-
+Hit / Miss = 304 / 696 = 0.436782
 
 n = 50
 Output:
-
+Hit / Miss = 324 / 676 = 0.479290
 
 n = 100
 Output:
+Hit / Miss = 352 / 648 = 0.543210
 
-
-- decreasing the number of different (unique) pages:
+- decreasing the number of different (unique) pages (1000 randomly generated numbers from 1 to 100 - ex2_input_1_2.txt):
 n = 10
 Output:
-
+Hit / Miss = 82 / 918 = 0.089325
 
 n = 50
 Output:
-
+Hit / Miss = 491 / 509 = 0.964637
 
 n = 100
 Output:
+Hit / Miss = 900 / 100 = 9.000000
 
 
 I constructed sequence of references that will result in decreased Hit/Miss ratio by:
-- decreasing the quantity of consequetive references to the same page:
+- decreasing the quantity of consequetive references to the same page (1000 randomly generated numbers from 1 to 10000 - ex2_input_2_1.txt):
 n = 10
 Output:
-
+Hit / Miss = 1 / 999 = 0.001001
 
 n = 50
 Output:
-
+Hit / Miss = 2 / 998 = 0.002004
 
 n = 100
 Output:
+Hit / Miss = 6 / 994 = 0.006036
 
-
-- increasing the number of different (unique) pages:
+- increasing the number of different (unique) pages (1000 randomly generated numbers from 1 to 5000 - ex2_input_2_2.txt):
 n = 10
 Output:
-
+Hit / Miss = 1 / 999 = 0.001001
 
 n = 50
 Output:
-
+Hit / Miss = 5 / 995 = 0.005025
 
 n = 100
 Output:
+Hit / Miss = 15 / 985 = 0.015228

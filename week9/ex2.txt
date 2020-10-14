@@ -1,0 +1,52 @@
+I constructed sequence of references that will result in increased Hit/Miss ratio by:
+- increasing the quantity of consequetive references to the same page:
+n = 10
+Output:
+
+
+n = 50
+Output:
+
+
+n = 100
+Output:
+
+
+- decreasing the number of different (unique) pages:
+n = 10
+Output:
+
+
+n = 50
+Output:
+
+
+n = 100
+Output:
+
+
+I constructed sequence of references that will result in decreased Hit/Miss ratio by:
+- decreasing the quantity of consequetive references to the same page:
+n = 10
+Output:
+
+
+n = 50
+Output:
+
+
+n = 100
+Output:
+
+
+- increasing the number of different (unique) pages:
+n = 10
+Output:
+
+
+n = 50
+Output:
+
+
+n = 100
+Output:

@@ -1,0 +1,7 @@
+current file: link1
+i-node: 670142
+files: link1 file1 
+
+current file: file1
+i-node: 670142
+files: link1 file1 

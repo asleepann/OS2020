@@ -1,0 +1,54 @@
+Commands (all can read/write):
+$ chmod a=rw _ex3.txt
+$ ls -l _ex3.txt
+Output:
+total 8
+--rw-rw-rw- 1 anna anna 0 окт 20 21:58 _ex3.txt
+
+Commands (owner and others can read/write/execute, group can read/write):
+$ chmod uo=rwx _ex3.txt
+$ ls -l _ex3.txt
+Output:
+-rwxrw-rwx 1 anna anna 0 окт 20 22:06 _ex3.txt
+
+Commands (group permissions equal to user permissions):
+$ chmod g=u _ex3.txt
+$ ls -l _ex3.txt
+Output:
+-rwxrwxrwx 1 anna anna 0 окт 20 22:06 _ex3.txt
+
+Commands:
+$ chmod 660 _ex3.txt
+$ ls -l _ex3.txt
+Output:
+-rw-rw---- 1 anna anna 0 окт 20 22:06 _ex3.txt
+Explanation:
+660 - first digit describes owner permissions, second - group, third - user.
+To determine what permissions, for example, owner have
+we can convert 6 from decimal into binary numeral system: 6 = 110.
+First digit is for "read", second - "write", third - "execute".
+If digit is 0, it means there is no such permission (for example, owner has no permission for execution of this file);
+if digit is 1, there is such permission (in this case, owner can read and write).
+6 = 110 - owner can rw
+6 = 110 - group can rw
+0 = 000 - user can do nothing
+
+Commands:
+$ chmod 775 _ex3.txt
+$ ls -l _ex3.txt
+Output:
+-rwxrwxr-x 1 anna anna 0 окт 20 22:06 _ex3.txt
+Explanation:
+7 = 111 - owner can rwx
+7 = 111 - group can rwx
+5 = 101 - user can rx
+
+Commands:
+$ chmod 777 _ex3.txt
+$ ls -l _ex3.txt
+Output:
+-rwxrwxrwx 1 anna anna 0 окт 20 22:06 _ex3.txt
+Explanation:
+7 = 111 - owner can rwx
+7 = 111 - group can rwx
+7 = 111 - user can rwx

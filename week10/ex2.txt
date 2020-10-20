@@ -1,0 +1,14 @@
+Command: $ link ~/labs/OS2020/week1/file.txt _ex2.txt
+_ex2.txt is created. file.txt and _ex2.txt are linked.
+
+Command: $ ls -i _ex2.txt
+Output:
+793492 _ex2.txt
+
+Command: $ find . -inum 793492
+Output:
+./week10/_ex2.txt
+./week1/file.txt
+
+Command: $ find . -inum 793492 -exec rm {} \;
+file.txt and _ex2.txt are deleted.

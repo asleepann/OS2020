@@ -36,7 +36,7 @@ int main() {
 
         // if number of files which have the same i-node number as current_file is >= 2
         // (current_i_node with a hard link count of two or more)
-        // then current file, print i-node number, and list of all files which have this i-node number
+        // then print name of the current_file, i-node number, and list of names of all files which have this i-node number
         if (i >= 2) {
             printf("current file: %s\ni-node: %d\nfiles: ", current_file->d_name, current_i_node);
             for (int j = 0; j < i; j++) {

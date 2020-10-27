@@ -1,0 +1,26 @@
+Output of the Program 1:
+"Hello
+Hello
+"
+
+Output of the Program 2:
+"Hello
+
+
+"
+
+Explanation:
+My system has line buffered stdout.
+In Program 1, when we call printf("Hello"), buffer is filled in with "Hello".
+Then when we call fork(), process is copied, and buffer is also copied,
+so now we have two processes with "Hello" inside their buffers.
+Then we call printf("\n"), and both buffers now have "Hello\n".
+Then both processes flush their buffers because of "\n"
+(indicator of the new line, and stdout is line buffered).
+So, we get output: "Hello\nHello\n".
+
+In Program 2, when we call printf("Hello\n"), string is printed, and then buffer flushes.
+Now buffer is empty, and after fork() both processes have empty buffer.
+Then both buffers are filled in with "\n" (after printf("\n")), and they are flushing
+because "\n" is an indicator of the new line and stdout is line buffered.
+So, we have the following output: "Hello\n\n\n".

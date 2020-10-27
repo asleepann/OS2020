@@ -6,7 +6,7 @@
 
 int main() {
     struct stat status1;
-    int file1 = open("ex1.txt", O_RDONLY); // open file with read permissions
+    int file1 = open("ex1.txt", O_RDONLY); // open file with read permission
     fstat(file1, &status1); // info about ex1.txt
     // map ex1.txt to the address1, so we can read from this file
     char *address1 = mmap(NULL, status1.st_size, PROT_READ, MAP_SHARED, file1, 0);

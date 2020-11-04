@@ -1,0 +1,44 @@
+File "copy.c" was downloaded from moodle and compiled in the following manner:
+gcc copy.c -DBUF_SIZE=20 -DSYNC -o copy
+Files for testing were created with the use of this command:
+truncate -s SIZE FILE
+
+default buffer size, file 30MB
+real    0m0,090s
+user    0m0,021s
+sys     0m0,070s
+
+
+default buffer size, file 100KB
+real    0m0,009s
+user    0m0,000s
+sys     0m0,009s
+
+buffer size 20000, file 30MB
+real    0m0,049s
+user    0m0,004s
+sys     0m0,032s
+
+buffer size 20000, file 100KB
+real    0m0,009s
+user    0m0,005s
+sys     0m0,004s
+
+SYNC_ON
+
+default buffer size, file 100KB
+real    0m0,077s
+user    0m0,001s
+sys     0m0,008s
+
+default buffer size, file 30MB
+real    0m18,662s
+user    0m0,052s
+sys     0m0,794s
+
+
+1. The bigger the file, the longer the time to copy it - this is obvious.
+2. The bigger the buffer, the faster is copying - less iterations happen. If buffer is too big, though,
+it may happen that it could decrease perfomance.
+3. Syncronisation also decreases perfomance as operating system watis for copying to be completed, while without
+this flag it may finish work earlier than it will be done.

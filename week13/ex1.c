@@ -96,7 +96,7 @@ int main() {
         }
     }
 
-    printf("No deadlocks is detected!\n"); // all processes are marked, therefore, there is no deadlocks
+    printf("No deadlocks are detected!\n"); // all processes are marked, therefore, there are no deadlocks
 
     return 0;
 }

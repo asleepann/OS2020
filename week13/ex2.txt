@@ -1,1 +1,20 @@
+Recovery from Deadlock through:
+- Preemtion:
+  This method is frequently difficult or impossible. It can be applied only if there is ability to take a resource away from a process,
+  have another process use it, and then give it back without the process noticing. In many cases, manual intervention can be required.
+- Rollback:
+  This method is suitable for such situation, when it is known that deadlocks are likely. System designers and machine operators can 
+  arrange to have processes checkpointed periodically.
+- Killing Processes:
+  This method can be applied if there is a process that holds needed resources and it can be rerun from the beginning with no ill effects.
+  This process will be killed in order to release resources and then run again.
 
+Deadlock Avoidance:
+- The Banker's Algorithm for a Single Resource:
+- The Banker's Algorithm for Multiple Resources:
+
+Deadlock Prevention:
+- Attacking the Mutual-Exclusion Condition:
+- Attacking the Hold-and-Wait Condition:
+- Attacking the No-Preemption Condition:
+- Attacking the Circular Wait Condition:

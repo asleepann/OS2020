@@ -10,11 +10,25 @@ Recovery from Deadlock through:
   This process will be killed in order to release resources and then run again.
 
 Deadlock Avoidance:
-- The Banker's Algorithm for a Single Resource:
-- The Banker's Algorithm for Multiple Resources:
+- The Banker's Algorithm:
+  The Banker's algorithm consider each request as it occurs, seeing whether granting it leads to a safe state. 
+  If it does, the request is granted; otherwise, it is postponed until later. To see if a state is safe, 
+  the deadlock detection algorithm is used. 
+  This method can be applied if we know in advance what is the maximum resource needs of each process will be. 
 
 Deadlock Prevention:
 - Attacking the Mutual-Exclusion Condition:
+  This method is used when we can avoid assigning a resource unless absolutely necessary, and try to make sure that
+  as few processes as possible may actually claim the resource (e.g. spooling printer output).
 - Attacking the Hold-and-Wait Condition:
+  This method can be applied when we can require all processes to request all their resources before starting execution. If everything
+  is available, the process will be allocated whatever it needs and can run to completion. If one or more resources are busy, 
+  nothing will be allocated and the process will just wait.
 - Attacking the No-Preemption Condition:
+  This method we use when resources can be virtualized (e.g. spooling printer output to the disk and allowing only the printer daemon
+  access to the real printer eliminates deadlocks involving the printer). 
 - Attacking the Circular Wait Condition:
+  This method is applied when we can follow a rule saying that a process is entitled only to a single resource at any moment. 
+  If it needs a second one, it must release the first one. Also, attacking the circular wait condition is possible
+  when we can provide a global numbering of all the resources and follow the rule saying that processes can request resources
+  whenever they want to, but all requests must be made in increasing/decreasing order.
